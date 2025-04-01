@@ -1,0 +1,71 @@
+.create-token-page {
+    min-height: 100vh;
+    padding: 2rem;
+    background: linear-gradient(135deg, #1e1b4b, #312e81);
+}
+
+.create-token-title {
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(to right, #818cf8, #c7d2fe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: titleFadeIn 0.8s ease-out;
+}
+
+.create-token-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(to right, #818cf8, #c7d2fe);
+    border-radius: 2px;
+    animation: lineWidth 0.8s ease-out forwards;
+}
+
+@keyframes titleFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes lineWidth {
+    from {
+        width: 0;
+    }
+    to {
+        width: 120px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .create-token-page {
+        padding: 1.5rem;
+    }
+    
+    .create-token-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .create-token-page {
+        background: linear-gradient(135deg, #0f172a, #1e1b4b);
+    }
+}
